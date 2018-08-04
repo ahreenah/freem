@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+var login="{{ login }}";
+var cid="{{ cid }}";
+var lastnum=1;
+function getLastNum(){
+	var req = new XMLHttpRequest();
+	
+req.open("GET", "/lastnum/"+cid, false);
+	
+req.send(null);
+
+	return req.responseText;
+}
+function getLastText(){
+	var req = new XMLHttpRequest();
+	
+req.open("GET", "/last/"+cid, false);
+	
+req.send(null);
+
+	return req.responseText;
+}
+function send(){
+	var req = new XMLHttpRequest();
+	
+req.open("GET", "/send/"+cid+"/"+document.getElementById("mes").value, false);
+	
+req.send(null);
+
+	return req.responseText;
+}
+function check(){
+	if(getLastNum()!=lastnum){
+		lastnum=getLastNum();
+		console.log(getLastText());
+		document.getElementById("out").innerHTML+="<br>"+getLastText();
+	}
+}
+setInterval("check()",100)
+</script>
+
+<form>
+    <p class="par">
+    <a href="/invite/{{ cid }}">invite others</a>
+    <input type="text" name="mes" id="mes"/>
+    <input type="button" onclick="send()" value="send"/>
+    <div id="out" class="par"></div>
+    </p>
+</form>
+
+{% endblock %}

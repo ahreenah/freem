@@ -1,0 +1,3 @@
+C:\Users\Александр\Documents\python\Freem\obj\Debug\Freem.pyproj.CoreCompileInputs.cache
+C:\Users\Александр\Documents\python\Freem\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\Александр\Documents\python\Freem\bin\wfastcgi.py

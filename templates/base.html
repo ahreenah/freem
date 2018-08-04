@@ -1,0 +1,160 @@
+<link href="https://fonts.googleapis.com/css?family=Andika|Press+Start+2P|Russo+One" rel="stylesheet">
+
+<style>
+
+.par{
+
+  font-family:'Press Start 2P';
+
+  color:white;
+
+  font-family:'Andika';
+
+  background:#747474;
+
+  border-radius: 10px;
+
+  padding:10px;
+
+  margin-left:200px;
+
+  margin-right:200px;
+
+  font-size:14pt;
+
+}
+
+.but{
+
+  background:#DCA80C;
+
+  padding:10px;
+
+  border: none;
+
+}
+
+.but:hover{
+
+  background:#FAD81E;
+
+}
+
+.top-menu {
+
+  display: flex;
+ /* flex || inline-flex */
+
+ //background: #123012;
+
+ //padding:0px 50px;
+
+  justify-content: space-between;
+ 
+  margin-left:200px;
+
+  margin-right:200px;
+
+}
+
+.begin{
+
+  border-top-left-radius:10px;
+
+  border-bottom-left-radius:10px;
+
+}
+
+.end{
+
+  border-top-right-radius:10px;
+
+  border-bottom-right-radius:10px;
+
+}
+
+.top-wrapper{
+
+  background:black;
+
+  min-width:100%;
+
+  border-radius:10px;
+
+}
+
+.menu-item{
+
+  text-align:center;
+
+  background:black;
+
+  padding:15px 10px;
+
+  color: #DCA80C;
+
+  flex-grow:1;
+
+  font-family:'Russo One';
+
+  text-decoration:none;
+
+}
+
+.freem{
+
+  text-align:center;
+
+  background:#DCA80C;
+
+  padding:15px 10px;
+
+  color: black;
+
+  font-family:'Russo One';
+
+  flex-grow:1;
+
+  text-decoration:none;
+
+}
+
+.freem:hover{
+
+  background:#FAD81E;
+
+}
+
+.menu-item:hover{
+
+  background:#545454;
+
+}
+
+body{
+
+  background:#444444;
+}
+
+</style>
+
+<div class="top-wrapper">
+
+<div class="top-menu">
+
+  <A HREF="/" class="freem begin">freem</a>
+
+  <A href="/" class="menu-item"><b>main</b></a>
+
+  <A href="/about" class="menu-item"><b>about</b></a>
+
+  <A href="/license" class="menu-item"><b>license</b></a>
+
+  <A href="/login" class="menu-item end"> <b>{{ linf }}</b> </a>
+</div>
+
+</div>
+
+
+{% block content %}
+{% endblock %}

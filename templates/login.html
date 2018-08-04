@@ -1,0 +1,11 @@
+﻿{% extends "base.html" %}
+{% block content %}
+
+<form action="/loggedin" method="POST">
+<p class="par">    Login:<br />
+    Enter login:<input type="text" name="login" /><br />
+    Entr password: <input type="password" name="password"><br />
+    <input type="submit" /></p>
+</form>
+
+{% endblock %}

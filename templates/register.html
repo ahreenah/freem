@@ -1,0 +1,12 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<form action="/registered" method="POST">
+    <p class="par">
+    Register:<br />
+    Enter login:<input type="text" name="login" /><br />
+    Entr password: <input type="password" name="password"><br />
+    Repeat your passsword: <input type="password" name="password_repeat"><br />
+    <input type="submit" />
+    </p>
+</form>
+{% endblock %}
